@@ -5,8 +5,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  - The game showed an input box prompting me to guess a number. A banner was displayed telling me to guess a number and that I have 7 attempts. There is a sidebar where I can select the difficulty as well as the selected range and number of attempts left which I assume it would change based on the selected difficulty.
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
+  - I tried to start a new game after completing one, and it did not start a new game. Entering guesses did not do anything and text was displayed telling me to start a new game even though I already have.
+  - Pressing show hint doesn't seem to do anything. It doesn't change anything in the developer debug info dropdown and nothing changes anywhere else on the app.
+  - The range and number of attempts does not accuractely reflect the difficulties.
 
 ---
 
