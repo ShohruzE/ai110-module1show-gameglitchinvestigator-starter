@@ -40,8 +40,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+  - The secret number kept changing because Streamlit reruns the whole script whenever you interact with the page, like typing, clicking a button, or changing difficulty. If the app generates the secret number in normal top-level code during each rerun, it creates a new random number over and over. That means the game was not really comparing my guesses against one consistent target. The bug was not the random function itself, it was where and when that function was being called.
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+  - I would explain reruns as Streamlit basically reloading the Python script from top to bottom every time the user does something in the UI. Session state is like a small memory box that survives those reruns, so values can stay the same between interactions. Without session state, variables get recreated and can lose the progress of the game. With session state, the app can remember things like the secret number, score, attempts, and history.
 - What change did you make that finally gave the game a stable secret number?
+  - The main change was storing the secret number in `st.session_state.secret` instead of letting it be regenerated during normal script execution. I only create it once when the key does not exist yet, and then I reset it intentionally when the player clicks New Game. That gave the app one consistent secret number for the entire round. After that change, guesses were checked against the same value until the game was reset.
 
 ---
 
@@ -49,5 +52,9 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+    - One strategy from this project that I want to reuse in future labs or projects utilizing ask mode to understand the code base.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+  - One thing I would do differently next time is not rely on it for very simple tasks, because at least in this instance of using it, it hallucinated more and spent an unreasonable amount of time fixing bugs that I could have fixed manually.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  - This project has made me more cautious of AI generated code because of the mistakes it made for simple tasks.
