@@ -18,17 +18,22 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  - I used GitHub Copilot with the GPT-5 mini and 5.3 Codex models.
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  - The AI suggested to move the functions in app.py to logic_utils.py without me specifying it.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+  - One thing that was incorrect was the range of the different difficulties. It stuck with keeping normal mode at 100 instead of 50 and vice versa for the hard mode which doesn't make sense. Verified the changes by reviewing the UI output.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+  - I decided if a bug was really fixed by own judgement and verifying if functionality made sense through interacting with the streamlit app.
+- Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
+  - One test I ran was checking if entering guesses correctly matched the expected helper text.
 - Did AI help you design or understand any tests? How?
+  - Yes, AI wrote the tests for all of the helper functions of the app.
 
 ---
 
